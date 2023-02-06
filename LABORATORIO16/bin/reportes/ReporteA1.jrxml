@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.18.1-9d75d1969e774d4f179fb3be8401e98a0e6d1611  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteA1" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="917db64a-22b3-4a01-a66b-76720a7fea01">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter "/>
+	<queryString language="SQL">
+		<![CDATA[Select * from inventario.almacen]]>
+	</queryString>
+	<field name="almc_cod" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="almc_cod"/>
+		<property name="com.jaspersoft.studio.field.label" value="almc_cod"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="almacen"/>
+	</field>
+	<field name="almc_direc" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="almc_direc"/>
+		<property name="com.jaspersoft.studio.field.label" value="almc_direc"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="almacen"/>
+	</field>
+	<field name="almc_dist" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="almc_dist"/>
+		<property name="com.jaspersoft.studio.field.label" value="almc_dist"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="almacen"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="29" splitType="Stretch">
+			<staticText>
+				<reportElement x="88" y="0" width="100" height="18" uuid="17633c9b-05c3-44be-892e-7cd371af4132">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b9cef8a8-f1a7-41a3-b9df-9f7a694ce21c"/>
+				</reportElement>
+				<text><![CDATA[CODIGO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="360" y="0" width="100" height="19" uuid="ca6f4ae1-e01a-4d77-b54f-63dff085da07">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a1baba42-6c2b-4b39-9fd2-5e8f6d22f6b0"/>
+				</reportElement>
+				<text><![CDATA[DIRECCIÒN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="230" y="0" width="100" height="18" uuid="150af9ff-9cb5-43a8-87d5-888954fe920a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="99b297ad-a351-40d0-b0ce-1d5600b83cd7"/>
+				</reportElement>
+				<text><![CDATA[DISTRITO]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<textField>
+				<reportElement x="100" y="0" width="100" height="18" uuid="328d6823-0705-4188-aef0-0567e0ab76e8">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b9cef8a8-f1a7-41a3-b9df-9f7a694ce21c"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{almc_cod}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="230" y="2" width="100" height="19" uuid="f0bb9ab7-0daf-42db-b0da-ddeced789ebe">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a1baba42-6c2b-4b39-9fd2-5e8f6d22f6b0"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{almc_direc}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="360" y="5" width="100" height="18" uuid="75363074-d9b5-4997-b978-615474a20678">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="99b297ad-a351-40d0-b0ce-1d5600b83cd7"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{almc_dist}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
